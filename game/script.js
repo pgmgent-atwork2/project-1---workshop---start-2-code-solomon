@@ -62,6 +62,3 @@ function getTimerTime() {
 
 
 renderNewQuote() 
-
-
-
