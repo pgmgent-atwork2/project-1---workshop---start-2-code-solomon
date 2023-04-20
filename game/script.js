@@ -4,11 +4,19 @@ const quoteInputElement = document.getElementById('quoteInput');
 const timerElement = document.getElementById('timer');
 const startButton = document.querySelector('button');
 
+async function getCurrentWeather () {
+	const response = await fetch("http://api.weatherapi.com/v1/current.json?key=28ec16b97de640a3aae234209221912&q=Ghent&aqi=no");
+	const data = await response.json();
+	displayWeather(data.current);
+  }
+  getCurrentWeather();
+  function displayWeather (weather) {
+	document.getElementById("weather").innerHTML = `${weather.temp_c}°c in Ghent`;
+  }
 
 quoteInputElement.addEventListener('input', () => {
 	const arrayQuote = quoteDisplayElement.querySelectorAll('span');
 	const arrayValue = quoteInputElement.value.split('');
-
 	let correct = true;
 	arrayQuote.forEach((characterSpan, index) => {
 		const character = arrayValue[index];
@@ -27,13 +35,14 @@ quoteInputElement.addEventListener('input', () => {
 	});
 	if(correct) renderNewQuote()
 });
-	
+
 
 function getRandomQuote() {
   return fetch(RANDOM_QUOTE_API_URL)
 	.then(response => response.json())
 	.then(data => data.content)
 }
+
 
 async function renderNewQuote() {
   const quote = await getRandomQuote()
@@ -47,6 +56,7 @@ async function renderNewQuote() {
   startTimer()
 }
 
+
 let startTime
 function startTimer() {
 	timerElement.innerText = 0
@@ -56,9 +66,15 @@ function startTimer() {
 	}, 1000)
 }
 
+
 function getTimerTime() {
 	return Math.floor((new Date() - startTime) / 1000)
 }
 
 
-renderNewQuote() 
+startButton.addEventListener('click', beginGame)
+function beginGame() {
+	renderNewQuote();
+}
+
+

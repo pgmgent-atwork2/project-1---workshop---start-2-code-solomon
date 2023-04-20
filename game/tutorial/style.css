@@ -1,0 +1,15 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: linear-gradient(22deg, #F0DB4F, #0525df);
+	min-height: 100vh;
+	margin-left: 25rem;
+	margin-right: 25rem;
+}
+
+img {
+	max-width: 100%;
+	width: 40rem;
+}
