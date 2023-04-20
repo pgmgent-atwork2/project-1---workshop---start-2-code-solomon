@@ -8,13 +8,14 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
+		<h1 class="big_title">Speed Typing Game Tutorial</h1>
 		<div class="titel">
-			<h2>Welkom bij de tutorial van het Speed Typing Game! In deze tutorial gaan we door hoe je het spel speelt en begrijp je de HTML-, CSS- en JavaScript-code die gebruikt wordt om het spel te bouwen.</h2>
+			<h1>Welkom bij de tutorial van het Speed Typing Game! In deze tutorial gaan we door hoe je het spel speelt en begrijp je de HTML-, CSS- en JavaScript-code die gebruikt wordt om het spel te bouwen.</h1>
 		</div>
 		<div class="container">
 			<h2>Begin Playing</h2>
-			<img src="./images/begin_the_game.png" alt="">
-			<p>Click on the "start game" button to begin playing the game.</p>
+			<img src="./images/begin_the_game.png" alt="" srcset="">
+			<p>Click op de "start game" button om het spel te beginnen spelen.</p>
 			<p>Hoe je het spel speelt
 				Het doel van het spel is om de gegeven willekeurige quote zo snel en nauwkeurig mogelijk te typen. Je krijgt een quote te zien in de "quote-display" sectie, en je moet de quote typen in de "quote-input" sectie. Terwijl je typt, veranderen de letters in de quote van kleur om te laten zien of je ze correct hebt getypt of niet. Als je een fout maakt, wordt de letter rood en als je het goed hebt, wordt het groen.
 			</p>
@@ -25,7 +26,31 @@
 			<p>
 				De HTML-code definieert de structuur van de webpagina en bevat de benodigde elementen voor het spel om correct te functioneren. Hier is een uitsplitsing van de code:
 			</p>
-			<img src="html_code.png" alt="">
+			<script async src="//jsfiddle.net/SoloProg/sxqrc26u/2/embed/html/dark/"></script>
+			<h2>De CSS code</h2>
+			<script async src="//jsfiddle.net/SoloProg/sxqrc26u/6/embed/css/dark/"></script>
+			<p>
+				De CSS-code definieert de stijl van de webpagina, inclusief het ontwerp, de kleuren en de lay-out.
+
+				body: Deze selector past stijlen toe op het gehele lichaam van de webpagina.
+				.timer: Deze selector past stijlen toe op de timer-sectie.
+				h1: Deze selector past stijlen toe op de titel van het spel.
+				.container: Deze selector past stijlen toe op de containersectie.
+				.quote-display: Deze selector past stijlen toe op de quote-displaysectie.
+				.quote-input: Deze selector past stijlen toe op de quote-inputsectie.
+				.correct: Deze klasse past stijlen toe op correct getypte karakters.
+			</p>
+			<h2>De JavaScript-code</h2>
+			<script async src="//jsfiddle.net/SoloProg/sxqrc26u/6/embed/js/dark/"></script>
+			<p>
+			De JavaScript-code zorgt voor de functionaliteit van het spel, waaronder het genereren van een willekeurige quote, het controleren van de invoer van de gebruiker en het starten en stoppen van de timer. Hier is een uitsplitsing van de code:
+
+			const RANDOM_QUOTE_API_URL: Deze constante definieert de URL voor de API die wordt gebruikt om een willekeurige quote te genereren.
+			const quoteDisplayElement, quoteInputElement, timerElement, startButton: Deze constanten selecteren de HTML-elementen die door de JavaScript-code worden gebruikt.
+			async function getCurrentWeather(): Deze functie haalt de huidige weergegevens op van de Weather API en toont deze op de webpagina.
+			quoteInputElement.addEventListener('input', () => {...});: Deze functie luistert naar de invoer van de gebruiker in het invoervak voor de quote en controleert of de gebruiker de quote correct heeft getypt.
+			function getRandomQuote(): Deze functie haalt een willekeurige quote op van de API en...
+			</p>
 		</div>
 	</body>
 </html>
