@@ -10,24 +10,33 @@
 	<body>
 		<h1 class="big_title">Speed Typing Game Tutorial</h1>
 		<div class="titel">
-			<h1>Welkom bij de tutorial van het Speed Typing Game! In deze tutorial gaan we door hoe je het spel speelt en begrijp je de HTML-, CSS- en JavaScript-code die gebruikt wordt om het spel te bouwen.</h1>
+			<h1>Welkom bij de tutorial van de Speed Typing Game! <br> In deze tutorial zul je stap voor stap zien <br> hoe je het spel speelt en hoe je de HTML-, CSS- en JavaScript-code <br> kan opbouwen voor dit spel .</h1>
 		</div>
 		<div class="container">
-			<h2>Begin Playing</h2>
-			<img src="./images/begin_the_game.png" alt="" srcset="">
-			<p>Click op de "start game" button om het spel te beginnen spelen.</p>
-			<p>Hoe je het spel speelt
+			<h2>
+				<li>Begin Playing</li>
+			</h2>
+			<div class="Wrapper">
+				<div class="wrapper-1">
+					<img src="./images/begin_the_game.png" alt="" srcset="">
+				</div>
+				<div class="wrapper-2">
+					<p class="begin-playing">Click op de "start game" button om het spel te beginnen spelen. Hoe je het spel speelt
 				Het doel van het spel is om de gegeven willekeurige quote zo snel en nauwkeurig mogelijk te typen. Je krijgt een quote te zien in de "quote-display" sectie, en je moet de quote typen in de "quote-input" sectie. Terwijl je typt, veranderen de letters in de quote van kleur om te laten zien of je ze correct hebt getypt of niet. Als je een fout maakt, wordt de letter rood en als je het goed hebt, wordt het groen.
-			</p>
-			<p>
 				Als je klaar bent met het typen van de quote, stopt de timer en wordt je tijd weergegeven op het scherm. Je kunt dan op de "Start Game" knop klikken om een nieuw rond te starten en een nieuwe willekeurige quote te krijgen om te typen.
-			</p>
-			<h2>De HTML-code</h2>
+				</p>
+				</div>
+			</div>
+			<h2>
+				<li>De HTML-code</li>
+			</h2>
 			<p>
 				De HTML-code definieert de structuur van de webpagina en bevat de benodigde elementen voor het spel om correct te functioneren. Hier is een uitsplitsing van de code:
 			</p>
 			<script async src="//jsfiddle.net/SoloProg/sxqrc26u/2/embed/html/dark/"></script>
-			<h2>De CSS code</h2>
+			<h2>
+				<li>De CSS code</li>
+			</h2>
 			<script async src="//jsfiddle.net/SoloProg/sxqrc26u/6/embed/css/dark/"></script>
 			<p>
 				De CSS-code definieert de stijl van de webpagina, inclusief het ontwerp, de kleuren en de lay-out.
@@ -40,12 +49,14 @@
 				.quote-input: Deze selector past stijlen toe op de quote-inputsectie.
 				.correct: Deze klasse past stijlen toe op correct getypte karakters.
 			</p>
-			<h2>De JavaScript-code</h2>
+			<h2>
+				<li>De JavaScript-code</li>
+			</h2>
 			<script async src="//jsfiddle.net/SoloProg/sxqrc26u/6/embed/js/dark/"></script>
 			<p>
 			De JavaScript-code zorgt voor de functionaliteit van het spel, waaronder het genereren van een willekeurige quote, het controleren van de invoer van de gebruiker en het starten en stoppen van de timer. Hier is een uitsplitsing van de code:
 
-			const RANDOM_QUOTE_API_URL: Deze constante definieert de URL voor de API die wordt gebruikt om een willekeurige quote te genereren.
+			const RANDOM_QUOTE_API_URL: Deze constante definieert de URL voor de API (application programming interface) die wordt gebruikt om een willekeurige quote te genereren.
 			const quoteDisplayElement, quoteInputElement, timerElement, startButton: Deze constanten selecteren de HTML-elementen die door de JavaScript-code worden gebruikt.
 			async function getCurrentWeather(): Deze functie haalt de huidige weergegevens op van de Weather API en toont deze op de webpagina.
 			quoteInputElement.addEventListener('input', () => {...});: Deze functie luistert naar de invoer van de gebruiker in het invoervak voor de quote en controleert of de gebruiker de quote correct heeft getypt.
